@@ -18,8 +18,9 @@ RUN adduser --disabled-password --gecos '' docker \
  && echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 
 RUN apt-get update && apt-get install -y \
-    unzip libtool-bin curl cmake gperf gawk flex bison nano xxd fakeroot kmod cpio git python-docutils gettext automake autopoint \
-    texinfo build-essential help2man pkg-config zlib1g-dev libgmp3-dev libmpc-dev libmpfr-dev libncurses5-dev libltdl-dev wget libc-dev-bin \
+    build-essential asciidoc binutils bzip2 gawk gettext git libncurses5-dev libz-dev patch python3 python2.7 unzip zlib1g-dev lib32gcc1 \
+    libc6-dev-i386 subversion flex uglifyjs git-core gcc-multilib p7zip p7zip-full msmtp libssl-dev texinfo libglib2.0-dev xmlto qemu-utils upx libelf-dev \
+    autoconf automake libtool autopoint device-tree-compiler g++-multilib antlr3 gperf wget curl swig rsync \
  && rm -rf /var/lib/apt/lists/*
 
 USER docker
